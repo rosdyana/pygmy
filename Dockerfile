@@ -1,11 +1,12 @@
-FROM ubuntu:18.04
+FROM alpine:latest
 
 LABEL name='pygmy'
 LABEL version='1.0.0'
 LABEL description='Pygmy(pygy.co) URL shortener'
 LABEL vendor="Amit Tripathi"
 
-RUN apt update && apt install python3-pip -y
+RUN  apk update
+     
 RUN mkdir /var/log/pygmy
 
 WORKDIR /pygmy
